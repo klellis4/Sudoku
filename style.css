@@ -1,30 +1,40 @@
+table {
+	border: 2px solid black;
+}
+
+td {
+	border: 1px solid black;
+	text-align: center;
+	vertical-align: middle;
+}
+
 input {
-	width: 48px;
-	height: 48px;
 	padding: 0;
 	border: 0;
+	width: 48px;
+	height: 48px;
+	
 	text-align: center;
 	font-size: 24px;
 	outline: none;
 }
 
-table {
-	border: 3px solid black;
+input:disabled {
+	font-weight: bold;
 }
 
-td {
-	border: 1px solid black;
+#borderRight {
+	border-right: 2px solid #000000;
 }
 
-.topLeft {
-	border-left: 2px solid black;
+#borderBottom {
+	border-bottom: 2px solid #000000;
 }
 
-.bottom {
-	border-bottom: 2px solid black;
+#borderLeft {
+	border-left: 2px solid #000000;
 }
 
-.bottom .topLeft {
-	border-left: 2px solid black;
-	border-bottom: 2px solid black;
+#borderTop {
+	border-top: 2px solid #000000;
 }

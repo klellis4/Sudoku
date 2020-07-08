@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<title>Sudoku Game</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -8,132 +9,161 @@
 <body>
 
 <div class="container">
+
 	<h1>Sudoku</h1>
-	<table id="board">
+	
+	<table id="grid">
 		<tr>
-			<td><input type="text" value="0" disabled maxlength="1"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Top left square, top row -->
+			<td><input type="text" id="cell1" value="1" disabled></td>
+			<td><input type="text" id="cell2"></td>
+			<td id="borderRight"><input type="text" id="cell3"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Top middle square, top row -->
+			<td><input id="cell4" type="text"></td>
+			<td><input type="text" id="cell5" value="5" disabled></td>
+			<td id="borderRight"><input type="text" id="cell6"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Top right square, top row -->
+			<td><input id="cell7" type="text"></td>
+			<td><input type="text" id="cell8"></td>
+			<td><input type="text" id="cell9" value="9" disabled></td>
 		</tr>
 
 		<tr>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Top left square, middle row -->
+			<td><input type="text" id="cell10"></td>
+			<td><input type="text" id="cell11"></td>
+			<td id="borderRight"><input type="text" id="cell12"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Top middle square, middle row -->
+			<td><input id="cell13" type="text"></td>
+			<td><input type="text" id="cell14"></td>
+			<td id="borderRight"><input type="text" id="cell15"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Top right square, middle row -->
+			<td><input id="cell16" type="text"></td>
+			<td><input type="text" id="cell17"></td>
+			<td><input type="text" id="cell18"></td>
 		</tr>
 
 		<tr>
-			<td><input class="bottom" type="text"></td>
-			<td><input class="bottom" type="text"></td>
-			<td><input class="bottom" type="text"></td>
+			<!-- Top left square, bottom row -->
+			<td id="borderBottom"><input id="cell19" type="text"></td>
+			<td id="borderBottom"><input id="cell20" type="text"></td>
+			<td id="borderBottom"><input id="cell21" type="text"></td>
 
-			<td><input class="bottom topLeft" type="text"></td>
-			<td><input class="bottom" type="text"></td>
-			<td><input class="bottom" type="text"></td>
+			<!-- Top middle square, bottom row -->
+			<td id="borderLeft"><input id="cell22" type="text"></td>
+			<td id="borderBottom"><input id="cell23" type="text"></td>
+			<td id="borderBottom"><input id="cell24" type="text"></td>
 
-			<td><input class="bottom topLeft" type="text"></td>
-			<td><input class="bottom" type="text"></td>
-			<td><input class="bottom" type="text"></td>
+			<!-- Top right square, bottom row -->
+			<td id="borderLeft"><input id="cell25" type="text"></td>
+			<td id="borderBottom"><input id="cell26" type="text"></td>
+			<td id="borderBottom"><input id="cell27" type="text"></td>
 		</tr>
 
 		<tr>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
-			<td><input  type="text"></td>
+			<!-- Middle left square, top row -->
+			<td><input type="text" id="cell28"></td>
+			<td><input type="text" id="cell29"></td>
+			<td id="borderRight"><input type="text" id="cell30"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Middle square, top row -->
+			<td id="borderTop"><input id="cell31" type="text"></td>
+			<td><input type="text" id="cell32"></td>
+			<td id="borderRight"><input type="text" id="cell33"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Middle right square, top row -->
+			<td id="borderTop"><input id="cell34" type="text"></td>
+			<td><input type="text" id="cell35"></td>
+			<td><input type="text" id="cell36"></td>
 		</tr>
 
 		<tr>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Middle left square, middle row -->
+			<td><input type="text" id="cell37"></td>
+			<td><input type="text" id="cell38"></td>
+			<td id="borderRight"><input type="text" id="cell39"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Middle square, middle row -->
+			<td><input id="cell40" type="text"></td>
+			<td><input type="text" id="cell41"></td>
+			<td id="borderRight"><input type="text" id="cell42"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Middle right square, middle row -->
+			<td><input id="cell43" type="text"></td>
+			<td><input type="text" id="cell44"></td>
+			<td><input type="text" id="cell45"></td>
 		</tr>
 
 		<tr>
-			<td><input class="bottom" type="text"></td>
-			<td><input class="bottom" type="text"></td>
-			<td><input class="bottom" type="text"></td>
+			<!-- Middle left square, bottom row -->
+			<td id="borderBottom"><input id="cell46" type="text"></td>
+			<td id="borderBottom"><input id="cell47" type="text"></td>
+			<td id="borderRight"><input id="cell48" type="text"></td>
 
-			<td><input class="bottom topLeft" type="text"></td>
-			<td><input class="bottom" type="text"></td>
-			<td><input class="bottom" type="text"></td>
+			<!-- Middle square, bottom row -->
+			<td id="borderBottom"><input id="cell49" type="text"></td>
+			<td id="borderBottom"><input id="cell50" type="text"></td>
+			<td id="borderRight"><input id="cell51" type="text"></td>
 
-			<td><input class="bottom topLeft" type="text"></td>
-			<td><input class="bottom" type="text"></td>
-			<td><input class="bottom" type="text"></td>
+			<!-- Middle right square, bottom row -->
+			<td id="borderBottom"><input id="cell52" type="text"></td>
+			<td id="borderBottom"><input id="cell53" type="text"></td>
+			<td id="borderBottom"><input id="cell54" type="text"></td>
 		</tr>
 
 		<tr>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Bottom left square, top row -->
+			<td><input type="text" id="cell55"></td>
+			<td><input type="text" id="cell56"></td>
+			<td id="borderTop"><input type="text" id="cell57"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Bottom middle square, top row -->
+			<td id="borderLeft"><input id="cell58" type="text"></td>
+			<td><input type="text" id="cell59"></td>
+			<td id="borderTop"><input type="text" id="cell60"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Bottom right square, top row -->
+			<td id="borderLeft"><input id="cell61" type="text"></td>
+			<td><input type="text" id="cell62"></td>
+			<td><input type="text" id="cell63"></td>
 		</tr>
 
 		<tr>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Botton left square, middle row -->
+			<td><input type="text" id="cell64"></td>
+			<td><input type="text" id="cell65"></td>
+			<td id="borderRight"><input type="text" id="cell66"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Bottom middle square, middle row -->
+			<td><input id="cell67" type="text"></td>
+			<td><input type="text" id="cell68"></td>
+			<td id="borderRight"><input type="text" id="cell69"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Bottom right square, middle row -->
+			<td><input id="cell70" type="text"></td>
+			<td><input type="text" id="cell71"></td>
+			<td><input type="text" id="cell72"></td>
 		</tr>
 
 		<tr>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Bottom left square, bottom row -->
+			<td><input type="text" id="cell73"></td>
+			<td><input type="text" id="cell74"></td>
+			<td id="borderRight"><input type="text" id="cell75"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Bottom middle square, bottom row -->
+			<td><input id="cell76" type="text"></td>
+			<td><input type="text" id="cell77"></td>
+			<td id="borderRight"><input type="text" id="cell78"></td>
 
-			<td><input class="topLeft" type="text"></td>
-			<td><input type="text"></td>
-			<td><input type="text"></td>
+			<!-- Bottom right square, bottom row -->
+			<td><input id="cell79" type="text"></td>
+			<td><input type="text" id="cell80"></td>
+			<td><input type="text" id="cell81"></td>
 		</tr>
 	</table>
 </div>
