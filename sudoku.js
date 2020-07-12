@@ -1,14 +1,13 @@
-// // Popup window code
-// function newPopup() {
-// 	popupWindow = window.open(
-// 		"", null,'height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
-// }
+var sec = 0;
+    function pad ( val ) { return val > 9 ? val : "0" + val; }
+    var timer = setInterval( function(){
+        $("#seconds").html(pad(++sec%60));
+        $("#minutes").html(pad(parseInt(sec/60,10)));
+    }, 1000);
 
-// $("button").on("click", function() {
-// 	popupWindow = window.open(
-// 		"", null,'height=300,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no,status=yes')
-
-// })
+$("#stopTime").on("click", function() {
+	clearInterval(timer);
+});
 
 
 // Get the modal
