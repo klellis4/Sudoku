@@ -80,7 +80,7 @@ img {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	width: 25%;
+	width: 40%;
 }
 
 
@@ -99,7 +99,8 @@ input {
 	border: 0;
 	width: 48px;
 	height: 48px;
-	
+	color: steelblue;
+	font-family: 'Kalam', cursive;
 	text-align: center;
 	font-size: 24px;
 	outline: none;
@@ -107,6 +108,8 @@ input {
 
 input:disabled {
 	font-weight: bold;
+	color: black;
+	font-family: 'Arimo', sans-serif;
 }
 
 #borderRight {

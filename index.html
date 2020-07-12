@@ -5,8 +5,8 @@
 	<title>Sudoku Game</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css2?family=Arimo:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	
 	
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
@@ -62,70 +62,70 @@
 	<table id="grid">
 		<tr>
 			<!-- Top left square, top row -->
-			<td><input type="text" id="cell1" value="1" disabled></td>
+			<td><input type="text" id="cell1"></td>
 			<td><input type="text" id="cell2"></td>
-			<td id="borderRight"><input type="text" id="cell3"></td>
+			<td id="borderRight"><input type="text" value="7" id="cell3" disabled></td>
 
 			<!-- Top middle square, top row -->
-			<td><input id="cell4" type="text"></td>
-			<td><input type="text" id="cell5" value="5" disabled></td>
-			<td id="borderRight"><input type="text" id="cell6"></td>
+			<td><input id="cell4" value="6" type="text" disabled></td>
+			<td><input type="text" id="cell5"></td>
+			<td id="borderRight"><input type="text" value="8" id="cell6" disabled></td>
 
 			<!-- Top right square, top row -->
 			<td><input id="cell7" type="text"></td>
-			<td><input type="text" id="cell8"></td>
-			<td><input type="text" id="cell9" value="9" disabled></td>
+			<td><input type="text" value="5" id="cell8" disabled></td>
+			<td><input type="text" id="cell9"></td>
 		</tr>
 
 		<tr>
 			<!-- Top left square, middle row -->
 			<td><input type="text" id="cell10"></td>
-			<td><input type="text" id="cell11"></td>
+			<td><input type="text" value="8" id="cell11" disabled></td>
 			<td id="borderRight"><input type="text" id="cell12"></td>
 
 			<!-- Top middle square, middle row -->
 			<td><input id="cell13" type="text"></td>
-			<td><input type="text" id="cell14"></td>
+			<td><input type="text" value="9" id="cell14" disabled></td>
 			<td id="borderRight"><input type="text" id="cell15"></td>
 
 			<!-- Top right square, middle row -->
 			<td><input id="cell16" type="text"></td>
 			<td><input type="text" id="cell17"></td>
-			<td><input type="text" id="cell18"></td>
+			<td><input type="text" value="6" id="cell18" disabled></td>
 		</tr>
 
 		<tr>
 			<!-- Top left square, bottom row -->
 			<td id="borderBottom"><input id="cell19" type="text"></td>
 			<td id="borderBottom"><input id="cell20" type="text"></td>
-			<td id="borderBottom"><input id="cell21" type="text"></td>
+			<td id="borderBottom"><input id="cell21" value="2" type="text" disabled></td>
 
 			<!-- Top middle square, bottom row -->
 			<td id="borderLeft"><input id="cell22" type="text"></td>
-			<td id="borderBottom"><input id="cell23" type="text"></td>
+			<td id="borderBottom"><input id="cell23" value="3" type="text" disabled></td>
 			<td id="borderBottom"><input id="cell24" type="text"></td>
 
 			<!-- Top right square, bottom row -->
 			<td id="borderLeft"><input id="cell25" type="text"></td>
-			<td id="borderBottom"><input id="cell26" type="text"></td>
+			<td id="borderBottom"><input id="cell26" value="1" type="text" disabled></td>
 			<td id="borderBottom"><input id="cell27" type="text"></td>
 		</tr>
 
 		<tr>
 			<!-- Middle left square, top row -->
-			<td><input type="text" id="cell28"></td>
+			<td><input type="text" value="7" id="cell28" disabled></td>
 			<td><input type="text" id="cell29"></td>
-			<td id="borderRight"><input type="text" id="cell30"></td>
+			<td id="borderRight"><input type="text" value="9" id="cell30" disabled></td>
 
 			<!-- Middle square, top row -->
-			<td id="borderTop"><input id="cell31" type="text"></td>
+			<td id="borderTop"><input id="cell31" value="4" type="text" disabled></td>
 			<td><input type="text" id="cell32"></td>
 			<td id="borderRight"><input type="text" id="cell33"></td>
 
 			<!-- Middle right square, top row -->
-			<td id="borderTop"><input id="cell34" type="text"></td>
-			<td><input type="text" id="cell35"></td>
-			<td><input type="text" id="cell36"></td>
+			<td id="borderTop"><input id="cell34" value="2" type="text" disabled></td>
+			<td><input type="text" value="8" id="cell35" disabled></td>
+			<td><input type="text" value="3" id="cell36" disabled></td>
 		</tr>
 
 		<tr>
@@ -135,9 +135,9 @@
 			<td id="borderRight"><input type="text" id="cell39"></td>
 
 			<!-- Middle square, middle row -->
-			<td><input id="cell40" type="text"></td>
-			<td><input type="text" id="cell41"></td>
-			<td id="borderRight"><input type="text" id="cell42"></td>
+			<td><input id="cell40" value="7" type="text" disabled></td>
+			<td><input type="text" value="5" id="cell41" disabled></td>
+			<td id="borderRight"><input type="text" value="3" id="cell42" disabled></td>
 
 			<!-- Middle right square, middle row -->
 			<td><input id="cell43" type="text"></td>
@@ -147,68 +147,68 @@
 
 		<tr>
 			<!-- Middle left square, bottom row -->
-			<td id="borderBottom"><input id="cell46" type="text"></td>
-			<td id="borderBottom"><input id="cell47" type="text"></td>
-			<td id="borderRight"><input id="cell48" type="text"></td>
+			<td id="borderBottom"><input id="cell46" value="1" type="text" disabled></td>
+			<td id="borderBottom"><input id="cell47" value="6" type="text" disabled></td>
+			<td id="borderRight"><input id="cell48" value="3" type="text" disabled></td>
 
 			<!-- Middle square, bottom row -->
 			<td id="borderBottom"><input id="cell49" type="text"></td>
 			<td id="borderBottom"><input id="cell50" type="text"></td>
-			<td id="borderRight"><input id="cell51" type="text"></td>
+			<td id="borderRight"><input id="cell51" value="2" type="text" disabled></td>
 
 			<!-- Middle right square, bottom row -->
-			<td id="borderBottom"><input id="cell52" type="text"></td>
+			<td id="borderBottom"><input id="cell52" value="7" type="text" disabled></td>
 			<td id="borderBottom"><input id="cell53" type="text"></td>
-			<td id="borderBottom"><input id="cell54" type="text"></td>
+			<td id="borderBottom"><input id="cell54" value="5" type="text" disabled></td>
 		</tr>
 
 		<tr>
 			<!-- Bottom left square, top row -->
 			<td><input type="text" id="cell55"></td>
-			<td><input type="text" id="cell56"></td>
+			<td><input type="text" value="7" id="cell56" disabled></td>
 			<td id="borderTop"><input type="text" id="cell57"></td>
 
 			<!-- Bottom middle square, top row -->
 			<td id="borderLeft"><input id="cell58" type="text"></td>
-			<td><input type="text" id="cell59"></td>
+			<td><input type="text" value="6" id="cell59" disabled></td>
 			<td id="borderTop"><input type="text" id="cell60"></td>
 
 			<!-- Bottom right square, top row -->
-			<td id="borderLeft"><input id="cell61" type="text"></td>
+			<td id="borderLeft"><input id="cell61" value="5" type="text" disabled></td>
 			<td><input type="text" id="cell62"></td>
 			<td><input type="text" id="cell63"></td>
 		</tr>
 
 		<tr>
 			<!-- Botton left square, middle row -->
-			<td><input type="text" id="cell64"></td>
+			<td><input type="text" value="9" id="cell64" disabled></td>
 			<td><input type="text" id="cell65"></td>
 			<td id="borderRight"><input type="text" id="cell66"></td>
 
 			<!-- Bottom middle square, middle row -->
 			<td><input id="cell67" type="text"></td>
-			<td><input type="text" id="cell68"></td>
+			<td><input type="text" value="2" id="cell68" disabled></td>
 			<td id="borderRight"><input type="text" id="cell69"></td>
 
 			<!-- Bottom right square, middle row -->
 			<td><input id="cell70" type="text"></td>
-			<td><input type="text" id="cell71"></td>
+			<td><input type="text" value="6" id="cell71" disabled></td>
 			<td><input type="text" id="cell72"></td>
 		</tr>
 
 		<tr>
 			<!-- Bottom left square, bottom row -->
 			<td><input type="text" id="cell73"></td>
-			<td><input type="text" id="cell74"></td>
+			<td><input type="text" value="3" id="cell74" disabled></td>
 			<td id="borderRight"><input type="text" id="cell75"></td>
 
 			<!-- Bottom middle square, bottom row -->
-			<td><input id="cell76" type="text"></td>
+			<td><input id="cell76" value="8" type="text" disabled></td>
 			<td><input type="text" id="cell77"></td>
-			<td id="borderRight"><input type="text" id="cell78"></td>
+			<td id="borderRight"><input type="text" value="4" id="cell78" disabled></td>
 
 			<!-- Bottom right square, bottom row -->
-			<td><input id="cell79" type="text"></td>
+			<td><input id="cell79" value="1" type="text" disabled></td>
 			<td><input type="text" id="cell80"></td>
 			<td><input type="text" id="cell81"></td>
 		</tr>
