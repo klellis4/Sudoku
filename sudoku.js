@@ -9,7 +9,6 @@ $("#stopTime").on("click", function() {
 	clearInterval(timer);
 });
 
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
