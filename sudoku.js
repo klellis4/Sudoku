@@ -48,8 +48,21 @@ $("#array").on('click', function() {
   });
   console.log(array);
 
-  var isSolved = isValidSudoku(array);
-  console.log(isSolved);
+  // Check if board has empty slot
+  if (array.some(row => row.includes(''))) {
+    console.log("Board not full");
+  } else {
+    console.log("Board is full.");
+  }
+
+  // Check if there are errors in current board
+  var errorsExist = isValidSudoku(array);
+  console.log(errorsExist);
+
+  // Check if the puzzle was solved successfully
+  if (errorsExist == true && !(array.some(row => row.includes('')))) {
+    console.log("Game was solved!");
+  }
 
 
 });
@@ -61,8 +74,10 @@ var isValidSudoku = function(board) {
     let valid = true;
     
     const validate = digits => {
+      // Sort each array
         digits = digits.filter(v => v !== '').map(n => Number(n)).sort((a, b) => a - b);
         
+        // If duplicates, answer is wrong
         for(let k = 0; k < digits.length -1; k++) {
             if(digits[k] === digits[k+1]) {
                 valid = false;
